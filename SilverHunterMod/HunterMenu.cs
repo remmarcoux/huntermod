@@ -36,41 +36,50 @@ namespace SilverHunterMod
             for (int i = 0; i < SlayerData.SlayerQuestClusters.Count; i++)
             {
                 SlayerQuestCluster cluster = SlayerData.SlayerQuestClusters[i];
-                int amount = cluster.Entries.Sum(e => Game1.stats.specificMonstersKilled.ContainsKey(e) ? Game1.stats.specificMonstersKilled[e] : 0);
+                drawMonsterCluster(batch, cluster, i);
+            }
+        }
 
-                SpriteFont font = Game1.smallFont;
-                Vector2 position = new Vector2(i % 2 == 0 ? Inbounds.X : Inbounds.X + Offsets.X,
-                    Inbounds.Y + Offsets.Y + ClusterOffset * (i / 2 + 1));
-                if (amount == 0)
-                {
-                    Utility.drawTextWithShadow(batch,
-                        Locs["UnknownMonsterString"],
-                        font,
-                        position,
-                        Game1.textColor * 0.33f,
-                        1f,
-                        0.1f);
-                }
-                else if (amount < cluster.KillsRequired)
-                {
-                    Utility.drawTextWithShadow(batch,
-                        $"{amount} / {cluster.KillsRequired} {cluster.Name}",
-                        font,
-                        position,
-                        Game1.textColor,
-                        1f,
-                        0.1f);
-                }
-                else
-                {
-                    Utility.drawTextWithShadow(batch,
-                        $"{amount} {cluster.Name} *",
-                        font,
-                        position,
-                        Game1.textColor,
-                        1f,
-                        0.1f);
-                }
+        /// <summary>Draws the text for each monster slayer quest</summary>
+        /// <param name="batch"></param>
+        /// <param name="cluster"></param>
+        /// <param name="index"></param>
+        private void drawMonsterCluster(SpriteBatch batch, SlayerQuestCluster cluster, int index)
+        {
+            int amount = cluster.Entries.Sum(e => Game1.stats.specificMonstersKilled.ContainsKey(e) ? Game1.stats.specificMonstersKilled[e] : 0);
+
+            SpriteFont font = Game1.smallFont;
+            Vector2 position = new Vector2(index % 2 == 0 ? Inbounds.X : Inbounds.X + Offsets.X,
+                Inbounds.Y + Offsets.Y + ClusterOffset * (index / 2 + 1));
+            if (amount == 0)
+            {
+                Utility.drawTextWithShadow(batch,
+                    Locs["UnknownMonsterString"],
+                    font,
+                    position,
+                    Game1.textColor * 0.33f,
+                    1f,
+                    0.1f);
+            }
+            else if (amount < cluster.KillsRequired)
+            {
+                Utility.drawTextWithShadow(batch,
+                    $"{amount} / {cluster.KillsRequired} {cluster.Name}",
+                    font,
+                    position,
+                    Game1.textColor,
+                    1f,
+                    0.1f);
+            }
+            else
+            {
+                Utility.drawTextWithShadow(batch,
+                    $"{amount} {cluster.Name} *",
+                    font,
+                    position,
+                    Game1.textColor,
+                    1f,
+                    0.1f);
             }
         }
     }

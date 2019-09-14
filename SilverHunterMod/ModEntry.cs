@@ -18,6 +18,7 @@ namespace SilverHunterMod
         }
 
 
+        // TODO: Change this to a collection tab instead of arbitrary keybind
         /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
         /// <param name="sender">The event sender.</param>
         /// <param name="e">The event data.</param>
@@ -26,16 +27,11 @@ namespace SilverHunterMod
             if ( !Context.IsWorldReady || Game1.activeClickableMenu == null || e.Button != SButton.R )
                 return;
 
-            //Game1.stats.specificMonstersKilled
-            //foreach (var monster in Game1.stats.specificMonstersKilled)
-            //{
-            //    this.Monitor.Log($"Nb of Killed {monster.Key}: {monster.Value}");
-            //}
-
-            // Opens the mode menu
+            // Opens the Hunter's menu
             OpenHunterMenu();
         }
 
+        /// <summary>Prepares the localized strings for the Hunter menu and opens it</summary>
         private void OpenHunterMenu()
         {
             Dictionary<string, string> locs = new Dictionary<string, string>();
