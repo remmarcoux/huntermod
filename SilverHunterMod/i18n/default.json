@@ -1,0 +1,12 @@
+﻿{
+	"menu.slayer.title":  "Monster Codex",
+	"menu.slayer.slayersyntaxunknown":  "Monster unknown",
+
+	"menu.slayer.slimes":  "Slimes",
+	"menu.slayer.voidspirits":  "Void Spirits",
+	"menu.slayer.bats": "Bats",
+	"menu.slayer.skeletons": "Skeletons",
+	"menu.slayer.insects": "Insects",
+	"menu.slayer.duggies": "Duggies",
+	"menu.slayer.dustsprites": "Dust Sprites"
+}

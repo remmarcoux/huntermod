@@ -1,0 +1,67 @@
+﻿{
+	"SlayerQuestClusters":  [
+		{
+			"Name" :  "Slimes",
+			"LocalizationKey":  "menu.slayer.slimes",
+			"Entries":  [
+				"Green Slime",
+				"Frost Jelly",
+				"Sludge",
+			],
+			"KillsRequired": 1000
+		},
+		{
+			"Name" :  "Void Spirits",
+			"LocalizationKey":  "menu.slayer.voidspirits",
+			"Entries":  [
+				"Shadow Brute",
+				"Shadow Shaman"
+			],
+			"KillsRequired": 150
+		},
+		{
+			"Name" :  "Bats",
+			"LocalizationKey":  "menu.slayer.bats",
+			"Entries":  [
+				"Bat",
+				"Frost Bat",
+				"Lava Bat"
+			],
+			"KillsRequired": 200
+		},
+		{
+			"Name" :  "Skeletons",
+			"LocalizationKey":  "menu.slayer.skeletons",
+			"Entries":  [
+				"Skeleton"
+			],
+			"KillsRequired": 50
+		},
+		{
+			"Name" :  "Insects",
+			"LocalizationKey":  "menu.slayer.insects",
+			"Entries":  [
+				"Bug",
+				"Fly",
+				"Grub"
+			],
+			"KillsRequired": 125
+		},
+		{
+			"Name" :  "Duggies",
+			"LocalizationKey":  "menu.slayer.duggies",
+			"Entries":  [
+				"Duggy"
+			],
+			"KillsRequired": 30
+		},
+		{
+			"Name" :  "Dust Sprites",
+			"LocalizationKey":  "menu.slayer.dustsprites",
+			"Entries":  [
+				"Dust Spirit"
+			],
+			"KillsRequired": 500
+		}
+	]
+}

@@ -1,0 +1,10 @@
+﻿{
+	"Name": "Silver's Hunter Mod",
+	"Author": "Rmarcoux",
+	"Version": "0.0.1",
+	"Description": "A mod that helps enhance combat and monster hunting for Stardew Valley",
+	"UniqueID": "Rmarcoux.SilverHunterMod",
+	"EntryDll": "SilverHunterMod.dll",
+	"MinimumApiVersion": "2.10.0",
+	"UpdateKeys": []
+}
